@@ -1,12 +1,13 @@
-module sine #(DIV_FACTOR = 1)
+module sine
   (
     input clk,
     input rst,
+    input [15:0] DIV_FACTOR,
     input [10:0] phase,
     output reg [15:0] dout
   );
 
-  reg [9:0] div_cnt;
+  reg [15:0] div_cnt;
   reg [10:0] lut_cnt;
 
 
